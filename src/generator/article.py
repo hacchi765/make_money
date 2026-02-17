@@ -14,7 +14,7 @@ class ArticleGenerator:
             # raise ValueError("GEMINI_API_KEY is required.")
         
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-flash-latest')
+        self.model = genai.GenerativeModel('gemini-1.5-pro')
         logger.info("Initialized Gemini API (google-generativeai).")
 
     def generate_article(self, keyword):
