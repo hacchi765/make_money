@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "make_money"
+version = "0.1.0"
+description = "AI-powered trend blog and SNS automation system"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "google-cloud-aiplatform",
+    "google-cloud-storage",
+    "google-cloud-firestore",
+    "pytrends",
+    "requests",
+    "beautifulsoup4",
+    "feedparser",
+    "playwright",
+    "python-dotenv",
+    "jinja2",
+    "schedule",
+    "flask"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+[tool.setuptools]
+packages = ["src"]

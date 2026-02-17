@@ -1,0 +1,9 @@
+baseURL = 'https://example.com/'
+languageCode = 'ja'
+title = 'AI Money Hacks'
+theme = 'ananke'
+
+[params]
+  description = "AI × 副業・投資で稼ぐための最新情報とノウハウを発信"
+  # AdSense ID placeholder
+  # googleAdsense = "ca-pub-XXXXXXXXXXXXXXXX"
