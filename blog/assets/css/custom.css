@@ -1,0 +1,47 @@
+/* Custom CSS for AI Money Hacks */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Outfit:wght@400;700&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  background-color: #f7f9fc;
+}
+
+h1, h2, h3, h4, h5, h6, .brand {
+  font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
+  color: #1a202c;
+}
+
+/* Header customization */
+.bg-black {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+/* Sidebar styling */
+.shadow-4 {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.navy {
+    color: #004e92;
+}
+
+/* Article content adjustments */
+.nested-copy-line-height p {
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    color: #334155;
+    font-size: 1.1rem;
+}
+
+/* Tag style */
+.pa2-l {
+    background-color: #e2e8f0;
+    color: #475569;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.pa2-l:hover {
+    background-color: #cbd5e1;
+}

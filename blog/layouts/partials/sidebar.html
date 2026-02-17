@@ -1,0 +1,31 @@
+<div class="pa3 pa4-ns bg-white nested-copy-line-height shadow-4 br3">
+  <section class="mb4">
+    <h3 class="f4 bold center bb b--black-10 pb2">Articles</h3>
+    <ul class="list pl0">
+      {{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+      <li class="mb3 border-bottom b--black-10 pb2">
+        <a href="{{ .RelPermalink }}" class="link navy dim db f6 fw6">{{ .Title }}</a>
+        <time class="f7 gray">{{ .Date.Format "2006/01/02" }}</time>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="mb4">
+    <h3 class="f4 bold center bb b--black-10 pb2">About</h3>
+    <p class="f6 gray lh-copy">
+      <strong>AI Money Hacks</strong><br>
+      AI技術と副業・投資ノウハウを組み合わせ、効率的に資産を形成するための情報を発信するテックブログです。
+    </p>
+    <div class="tc mt3">
+      <a href="/privacy" class="link blue dim f7">Privacy Policy</a>
+    </div>
+  </section>
+
+  <!-- Future AdSpace -->
+  <section class="mb4 tc">
+    <div class="bg-light-gray pa3 br2">
+      <span class="f7 gray">Advertisement</span>
+    </div>
+  </section>
+</div>

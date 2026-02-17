@@ -2,8 +2,26 @@ baseURL = 'https://x-auto-poster-bot.web.app/'
 languageCode = 'ja'
 title = 'AI Money Hacks'
 theme = 'ananke'
+hasCJKLanguage = true
 
 [params]
   description = "AI × 副業・投資で稼ぐための最新情報とノウハウを発信"
+  custom_css = ["css/custom.css"]
   # AdSense ID placeholder
   # googleAdsense = "ca-pub-XXXXXXXXXXXXXXXX"
+  # favicon = "images/ai_money_hacks_favicon.png"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 2
+
+[[menu.footer]]
+  name = "Privacy Policy"
+  url = "/privacy"
+

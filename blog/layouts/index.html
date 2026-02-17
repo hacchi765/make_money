@@ -1,0 +1,49 @@
+{{ define "main" }}
+{{/* ヒーローエリアまたは導入文 */}}
+<div class="bg-white ph3 pv4 pv5-l mb4">
+    <div class="mw8 center">
+        <article class="cf f4 mid-gray lh-copy">
+            {{ .Content }}
+        </article>
+    </div>
+</div>
+
+<div class="flex-l mw9 center ph3-ns flex-wrap justify-between mt4">
+    {{/* メインコンテンツエリア (左側) */}}
+    <div class="w-100 w-70-l ph3">
+        {{ $mainSections := .Site.Params.mainSections | compare.Default (collections.Slice "post") }}
+        {{ $section := collections.Where .Site.RegularPages "Section" "in" $mainSections }}
+        {{ $n_posts := .Site.Params.recent_posts_number | compare.Default 5 }}
+
+        <section class="w-100">
+            <h2 class="f3 b mb4 border-bottom b--black-10 pb2">最新の記事</h2>
+            {{ range (collections.First $n_posts $section) }}
+            <div class="w-100 mb4 pb4 border-bottom b--light-gray">
+                {{ .Render "summary-with-image" }}
+            </div>
+            {{ end }}
+        </section>
+
+        {{ if compare.Ge (len $section) (math.Add $n_posts 1) }}
+        <section class="w-100 mt5">
+            <h2 class="f4 b mb3">{{ lang.Translate "more" }}</h2>
+            <ul class="list pl0">
+                {{ range (collections.First 10 (collections.After $n_posts $section)) }}
+                <li class="mb2">
+                    <a href="{{ .RelPermalink }}" class="link blue dim f5 fw6">
+                        {{ .Title }}
+                    </a>
+                    <span class="f7 gray ml2">{{ .Date.Format "2006/01/02" }}</span>
+                </li>
+                {{ end }}
+            </ul>
+        </section>
+        {{ end }}
+    </div>
+
+    {{/* サイドバー (右側) */}}
+    <aside class="w-100 w-30-l ph3 mt5 mt0-l">
+        {{ partial "sidebar.html" . }}
+    </aside>
+</div>
+{{ end }}
