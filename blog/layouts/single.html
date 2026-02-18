@@ -59,6 +59,19 @@
         $.Site.Language.LanguageDirection "rtl" ) "pl4-l" "pr4-l" }} {{ if $needs_aside }}w-two-thirds-l{{ else
         }}w-100-l{{ end }}">
         {{- .Content -}}
+
+        <!-- In-Article Ad -->
+        {{ if .Site.Params.googleAdsense }}
+        <div class="mv4 tc">
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                data-ad-format="fluid" data-ad-client="{{ .Site.Params.googleAdsense }}"
+                data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        {{ end }}
+
         {{- partials.Include "tags.html" . -}}
         {{ if .Site.Config.Services.Disqus.Shortname }}
         <div class="mt6 instapaper_ignoref">

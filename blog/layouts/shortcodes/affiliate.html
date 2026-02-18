@@ -1,0 +1,32 @@
+<div class="affiliate-box mv4 pa3 br3 bg-near-white shadow-2">
+    {{ if .Get "image" }}
+    <div class="flex-l items-center">
+        <div class="w-100 w-30-l mb3 mb0-l">
+            <img src="{{ .Get " image" }}" alt="{{ .Get " title" }}" class="br2 db center">
+        </div>
+        <div class="w-100 w-70-l pl3-l">
+            {{ end }}
+
+            <h4 class="f4 bold mt0 mb2">{{ .Get "title" }}</h4>
+            <p class="f6 gray mb3">{{ .Get "description" }}</p>
+
+            <div class="flex flex-wrap gap2">
+                {{ if .Get "amazon" }}
+                <a href="{{ .Get " amazon" }}" class="link dib pv2 ph3 bg-orange white f6 br2 dim mr2 mb2"
+                    target="_blank" rel="nofollow">Amazonで見る</a>
+                {{ end }}
+                {{ if .Get "rakuten" }}
+                <a href="{{ .Get " rakuten" }}" class="link dib pv2 ph3 bg-red white f6 br2 dim mr2 mb2" target="_blank"
+                    rel="nofollow">楽天で見る</a>
+                {{ end }}
+                {{ if .Get "url" }}
+                <a href="{{ .Get " url" }}" class="link dib pv2 ph3 bg-blue white f6 br2 dim mb2" target="_blank"
+                    rel="nofollow">{{ default "詳細を見る" (.Get "link_text") }}</a>
+                {{ end }}
+            </div>
+
+            {{ if .Get "image" }}
+        </div>
+    </div>
+    {{ end }}
+</div>

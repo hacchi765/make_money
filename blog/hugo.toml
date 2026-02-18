@@ -7,8 +7,9 @@ hasCJKLanguage = true
 [params]
   description = "AI × 副業・投資で稼ぐための最新情報とノウハウを発信"
   custom_css = ["css/custom.css"]
-  # AdSense ID placeholder
-  # googleAdsense = "ca-pub-XXXXXXXXXXXXXXXX"
+  # AdSense & Analytics
+  googleAdsense = "ca-pub-XXXXXXXXXXXXXXXX"
+  googleAnalytics = "G-XXXXXXXXXX"
   # favicon = "images/ai_money_hacks_favicon.png"
 
 [[menu.main]]

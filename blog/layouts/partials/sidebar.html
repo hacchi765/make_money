@@ -22,10 +22,23 @@
     </div>
   </section>
 
-  <!-- Future AdSpace -->
+  <!-- AdSpace -->
+  {{ if .Site.Params.googleAdsense }}
+  <section class="mb4 tc">
+    <div class="bg-near-white pa2 br2">
+      <span class="f7 gray db mb1">Advertisement</span>
+      <ins class="adsbygoogle" style="display:block" data-ad-client="{{ .Site.Params.googleAdsense }}"
+        data-ad-slot="YOUR_AD_SLOT_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </section>
+  {{ else }}
   <section class="mb4 tc">
     <div class="bg-light-gray pa3 br2">
       <span class="f7 gray">Advertisement</span>
     </div>
   </section>
+  {{ end }}
 </div>

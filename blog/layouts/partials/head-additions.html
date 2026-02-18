@@ -1,0 +1,15 @@
+{{ if .Site.Params.googleAdsense }}
+<script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.googleAdsense }}"
+    crossorigin="anonymous"></script>
+{{ end }}
+
+{{ if .Site.Params.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.Params.googleAnalytics }}');
+</script>
+{{ end }}
